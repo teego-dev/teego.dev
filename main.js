@@ -48,14 +48,16 @@ fetch("./profiles.csv")
             },
         };
 
+        const supportsColumnRearrangement = !window.matchMedia("(pointer: coarse)").matches;
+
         const table = new Tabulator("#profiles-table", {
             data: result.data,
             layout: "fitColumns",
             responsiveLayout: false,
             height: "72vh",
             placeholder: "No profiles available",
-            movableColumns: true,
-            resizableColumns: true,
+            movableColumns: supportsColumnRearrangement,
+            resizableColumns: supportsColumnRearrangement,
             selectableRows: false,
             headerSort: true,
             headerWordWrap: true,
