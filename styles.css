@@ -19,6 +19,7 @@ body {
     background-color: #161616;
     font-family: "IBM Plex Sans";
     margin: 1rem;
+    min-width: 1380px;
 }
 
 h1 {
