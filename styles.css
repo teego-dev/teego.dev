@@ -1,0 +1,96 @@
+@font-face {
+    font-display: block;
+    font-family: "IBM Plex Sans";
+    font-style: normal;
+    font-weight: 100 900;
+    src: url('fonts/IBMPlexSans-VariableFont_wdth\,wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Go Mono";
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/Go-Mono.ttf') format('truetype');
+}
+
+
+body {
+    background-color: #161616;
+    font-family: "IBM Plex Sans";
+    margin: 1rem;
+}
+
+h1 {
+    color: #6fdc8c;
+    font-weight: 300;
+}
+
+.center {
+    text-align: center;
+}
+
+.search-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 0 0.75rem;
+}
+
+.search-container input {
+    width: min(22rem, 100%);
+    padding: 0.65rem 0.8rem;
+    border-radius: 0.5rem;
+    border: 1px solid #8d8d8d;
+    background: #262626;
+    color: #e5e5e5;
+    font: inherit;
+}
+
+.search-container input::placeholder {
+    color: #b7b7b7;
+}
+
+.tabulator {
+    font-family: "IBM Plex Sans";
+    border-radius: 0.5em;
+    border: 1px solid #8d8d8d;
+    cursor: default !important;
+}
+
+/* Header */
+.tabulator .tabulator-header {
+    color: #6fdc8c;
+    border-bottom: 2px solid #defbe6;
+}
+
+.tabulator .tabulator-header .tabulator-col {
+    background-color: #161616;
+}
+
+/* Rows (base and alternating/zebra striping) */
+.tabulator .tabulator-row {
+    background-color: #262626;
+    font-size: 0.75rem;
+    color: #e5e5e5;
+}
+
+.tabulator .tabulator-row.tabulator-row-even {
+    background-color: #161616;
+}
+
+.tabulator .tabulator-cell.numeric-column {
+    font-family: "Go Mono", monospace;
+}
+
+/* Row Hover */
+.tabulator .tabulator-row:hover {
+    background-color: #333333 !important;
+}
+
+.tabulator .tabulator-header .tabulator-col-title {
+    width: 10ch;
+    max-width: 10ch;
+    font-family: "Go Mono", monospace;
+    white-space: normal !important;
+    word-break: break-all !important;
+}
